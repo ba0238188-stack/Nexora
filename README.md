@@ -1,23 +1,6 @@
-# Nexora Android
+# Nexora APK
+This project wraps the current Nexora Cloudflare web app in an Android WebView.
 
-Android WebView wrapper for the Nexora web app. The current Nexora build is bundled under `app/src/main/assets/`.
+Cloudflare app URL: https://ancient-dream-fbbb.abualataali80.workers.dev
 
-## Build APK
-
-Requirements: JDK 17 and Android SDK Platform 35 / Build Tools installed.
-
-From this folder:
-
-```bash
-./gradlew assembleDebug
-```
-
-APK output:
-`app/build/outputs/apk/debug/app-debug.apk`
-
-For a release APK, configure a signing key and run `./gradlew assembleRelease`.
-
-## Notes
-- Supabase session storage is preserved by WebView cookies/local storage.
-- Camera, microphone, media selection and Android notifications permissions are declared.
-- The app is portrait-first and uses the Nexora icon.
+To build: push to GitHub, then Actions -> Build Nexora APK -> Run workflow. The APK is uploaded as an artifact named Nexora-debug-apk.
